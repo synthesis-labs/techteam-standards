@@ -1,0 +1,301 @@
+/* ================================================
+   Synthesis Software Technologies
+   TechTeam Standards — Document Theme
+   ================================================ */
+
+/* --- Page & Container --- */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f1f5f9;
+  color: #1f2937;
+}
+
+#quarto-content {
+  padding: 2rem 0 3rem;
+}
+
+main.content {
+  background: white;
+  padding: 3rem 3.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.09);
+  max-width: 900px;
+}
+
+/* --- Title Block --- */
+
+#title-block-header {
+  border-bottom: 2px solid #111827;
+  padding-bottom: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+#title-block-header::before {
+  content: "SYNTHESIS SOFTWARE TECHNOLOGIES  ·  TECHNOLOGY OFFICE";
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 0.9rem;
+}
+
+h1.title {
+  font-size: 2.6rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.05 !important;
+  color: #111827 !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0.15rem !important;
+}
+
+p.subtitle {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1.7rem !important;
+  color: #374151 !important;
+  font-weight: 400 !important;
+  margin-top: 0 !important;
+  line-height: 1.2;
+}
+
+/* --- Document Metadata --- */
+
+.doc-meta {
+  margin: 0.9rem 0 1.75rem;
+  font-size: 0.65rem;
+  color: #9ca3af;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.doc-meta strong {
+  color: #6b7280;
+  font-weight: 700;
+}
+
+/* --- Body prose --- */
+
+p {
+  font-size: 0.92rem;
+  color: #4b5563;
+  line-height: 1.75;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 1.25rem 0;
+}
+
+/* --- Spectrum Progress Indicator --- */
+
+.spectrum {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: relative;
+  padding: 0.5rem 0;
+  margin: 0.75rem 0;
+}
+
+.spectrum::before {
+  content: '';
+  position: absolute;
+  top: calc(0.5rem + 14px);
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: #e5e7eb;
+}
+
+.spectrum .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  position: relative;
+  z-index: 1;
+  width: 70px;
+}
+
+.spectrum .circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.spectrum .label {
+  font-size: 0.52rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.spectrum .s0 { color: #9ca3af; }
+.spectrum .s1 { color: #d97706; }
+.spectrum .s2 { color: #0d9488; }
+.spectrum .s3 { color: #2563eb; }
+.spectrum .s4 { color: #16a34a; }
+
+/* --- Level Cards --- */
+
+:root {
+  --l0: #9ca3af;
+  --l1: #d97706;
+  --l2: #0d9488;
+  --l3: #2563eb;
+  --l4: #16a34a;
+}
+
+.level-card {
+  border: 1px solid #e5e7eb;
+  border-left-width: 4px;
+  border-radius: 6px;
+  padding: 1.5rem 1.75rem;
+  margin: 1.25rem 0;
+}
+
+.level-0 { border-left-color: var(--l0); background: #fafafa; }
+.level-1 { border-left-color: var(--l1); background: #fffdf7; }
+.level-2 { border-left-color: var(--l2); background: #f7fffd; }
+.level-3 { border-left-color: var(--l3); background: #f7f9ff; }
+.level-4 { border-left-color: var(--l4); background: #f7fff9; }
+
+/* "LEVEL N" badge via pseudo-element */
+.level-card::before {
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.level-0::before { content: "LEVEL 0"; color: var(--l0); }
+.level-1::before { content: "LEVEL 1"; color: var(--l1); }
+.level-2::before { content: "LEVEL 2"; color: var(--l2); }
+.level-3::before { content: "LEVEL 3"; color: var(--l3); }
+.level-4::before { content: "LEVEL 4"; color: var(--l4); }
+
+/* Level name */
+.level-card h2 {
+  font-size: 1.45rem !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
+  letter-spacing: -0.01em !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 0 0.55rem !important;
+  text-transform: none !important;
+}
+
+/* Tagline quote */
+.level-card blockquote {
+  border-left: none !important;
+  padding: 0 !important;
+  margin: 0 0 1rem !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.level-card blockquote p {
+  font-style: italic;
+  color: #6b7280 !important;
+  font-size: 0.88rem !important;
+  margin: 0 !important;
+}
+
+/* Two-column grid inside cards */
+.level-card .columns {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 1.75rem;
+  margin-top: 0.5rem;
+}
+
+.level-card .column {
+  width: auto !important;
+  flex: none !important;
+}
+
+/* Column headings — ### Non-developer / Developer */
+.level-card h3 {
+  font-size: 0.6rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: #9ca3af !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  padding-bottom: 0.35rem !important;
+  margin: 0 0 0.65rem !important;
+}
+
+/* Bullet lists */
+.level-card ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
+.level-card li {
+  font-size: 0.85rem;
+  color: #374151;
+  padding: 0.2rem 0 0.2rem 1.2rem;
+  position: relative;
+  line-height: 1.55;
+  list-style: none !important;
+}
+
+.level-card li::marker { display: none; content: ""; }
+
+.level-card li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0.28rem;
+  font-size: 0.62rem;
+}
+
+.level-0 li::before { color: var(--l0); }
+.level-1 li::before { color: var(--l1); }
+.level-2 li::before { color: var(--l2); }
+.level-3 li::before { color: var(--l3); }
+.level-4 li::before { color: var(--l4); }
+
+/* Sub-labels inside Developer column (Seniors, Principals, Both levels) */
+.level-card .column p strong {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #6b7280;
+  margin: 0.8rem 0 0.25rem;
+}
+
+.level-card .column p strong:first-child {
+  margin-top: 0;
+}
+
+/* --- Closing note --- */
+
+main > p:last-of-type em,
+.content > p:last-of-type em {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}

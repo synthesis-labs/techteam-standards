@@ -1,0 +1,12 @@
+project:
+  output-dir: ../../dist/ai_maturity_field_guide
+
+format:
+  html:
+    theme: default
+    css: style.css
+    toc: false
+    embed-resources: true
+    page-layout: article
+  typst:
+    toc: true
