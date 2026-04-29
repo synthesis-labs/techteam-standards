@@ -2,3 +2,4 @@ dist/
 
 /.quarto/
 **/*.quarto_ipynb
+**/.quarto/
