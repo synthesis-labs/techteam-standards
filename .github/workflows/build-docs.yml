@@ -35,57 +35,6 @@ jobs:
             (cd "$doc_dir" && quarto render "$doc_name.md")
           done
 
-      - name: Generate index page
-        run: |
-          python3 << 'EOF'
-          import os
-
-          docs = sorted(
-            d for d in os.listdir("docs")
-            if os.path.isdir(f"docs/{d}") and os.path.exists(f"dist/{d}/{d}.html")
-          )
-
-          def title(name):
-            return name.replace("_", " ").title()
-
-          items = "\n".join(
-            f'    <li><a href="{d}/{d}.html">{title(d)}</a></li>'
-            for d in docs
-          )
-
-          page = f"""<!DOCTYPE html>
-          <html lang="en">
-          <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>TechTeam Standards</title>
-            <style>
-              body {{ font-family: system-ui, sans-serif; max-width: 620px; margin: 4rem auto; padding: 0 1.5rem; color: #1f2937; }}
-              .org {{ font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; color: #9ca3af; margin-bottom: .75rem; }}
-              h1 {{ font-size: 1.8rem; font-weight: 800; margin: 0 0 .25rem; }}
-              p {{ color: #6b7280; font-size: .9rem; margin: 0 0 2rem; }}
-              ul {{ list-style: none; padding: 0; margin: 0; }}
-              li {{ padding: .65rem 0; border-bottom: 1px solid #f3f4f6; }}
-              li a {{ color: #111827; font-weight: 600; text-decoration: none; }}
-              li a:hover {{ color: #2563eb; }}
-            </style>
-          </head>
-          <body>
-            <div class="org">Synthesis Software Technologies · Technology Office</div>
-            <h1>TechTeam Standards</h1>
-            <p>Shared technical documents for the engineering community.</p>
-            <ul>
-          {items}
-            </ul>
-          </body>
-          </html>"""
-
-          os.makedirs("dist", exist_ok=True)
-          with open("dist/index.html", "w") as f:
-            f.write(page)
-          print(f"Index written with {len(docs)} document(s).")
-          EOF
-
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/
