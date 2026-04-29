@@ -13,6 +13,7 @@ Each level is described twice: once in plain language (what it looks and feels l
 
 ---
 
+::: {.content-visible when-format="html"}
 <div class="spectrum">
 <div class="step s0"><div class="circle">0</div><div class="label">Resistant</div></div>
 <div class="step s1"><div class="circle">1</div><div class="label">Experimental</div></div>
@@ -20,6 +21,7 @@ Each level is described twice: once in plain language (what it looks and feels l
 <div class="step s3"><div class="circle">3</div><div class="label">Integrated</div></div>
 <div class="step s4"><div class="circle">4</div><div class="label">Strategic</div></div>
 </div>
+:::
 
 ---
 

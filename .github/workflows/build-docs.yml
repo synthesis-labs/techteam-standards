@@ -49,10 +49,7 @@ jobs:
             return name.replace("_", " ").title()
 
           items = "\n".join(
-            f'    <li>'
-            f'<a href="{d}/{d}.html">{title(d)}</a>'
-            f' <a class="pdf" href="{d}/{d}.pdf">PDF</a>'
-            f'</li>'
+            f'    <li><a href="{d}/{d}.html">{title(d)}</a></li>'
             for d in docs
           )
 
@@ -68,10 +65,9 @@ jobs:
               h1 {{ font-size: 1.8rem; font-weight: 800; margin: 0 0 .25rem; }}
               p {{ color: #6b7280; font-size: .9rem; margin: 0 0 2rem; }}
               ul {{ list-style: none; padding: 0; margin: 0; }}
-              li {{ display: flex; align-items: baseline; gap: .75rem; padding: .65rem 0; border-bottom: 1px solid #f3f4f6; }}
+              li {{ padding: .65rem 0; border-bottom: 1px solid #f3f4f6; }}
               li a {{ color: #111827; font-weight: 600; text-decoration: none; }}
               li a:hover {{ color: #2563eb; }}
-              .pdf {{ font-size: .75rem !important; color: #9ca3af !important; font-weight: 400 !important; }}
             </style>
           </head>
           <body>

@@ -32,7 +32,6 @@ Build a single document:
 
 Output lands in `dist/<doc-name>/`:
 - `dist/<doc-name>/<doc-name>.html` — self-contained HTML (no external dependencies)
-- `dist/<doc-name>/<doc-name>.pdf` — PDF via Quarto's typst renderer
 
 ### Requirements
 

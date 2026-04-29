@@ -50,7 +50,6 @@ for doc_name in "${doc_names[@]}"; do
     quarto render "$doc_name.md"
 
   echo "  → dist/$doc_name/$doc_name.html"
-  echo "  → dist/$doc_name/$doc_name.pdf"
 done
 
 echo ""
