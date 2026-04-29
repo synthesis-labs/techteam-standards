@@ -7,4 +7,4 @@ format:
     css: style.css
     toc: false
     embed-resources: true
-    page-layout: article
+    page-layout: full

@@ -20,7 +20,7 @@ main.content {
   padding: 3rem 3.5rem;
   border-radius: 6px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.09);
-  max-width: 900px;
+  max-width: 1200px;
 }
 
 /* --- Title Block --- */
@@ -176,21 +176,6 @@ hr {
 .level-3 { border-left-color: var(--l3); background: #f7f9ff; }
 .level-4 { border-left-color: var(--l4); background: #f7fff9; }
 
-/* "LEVEL N" badge via pseudo-element */
-.level-card::before {
-  display: block;
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  margin-bottom: 0.2rem;
-}
-
-.level-0::before { content: "LEVEL 0"; color: var(--l0); }
-.level-1::before { content: "LEVEL 1"; color: var(--l1); }
-.level-2::before { content: "LEVEL 2"; color: var(--l2); }
-.level-3::before { content: "LEVEL 3"; color: var(--l3); }
-.level-4::before { content: "LEVEL 4"; color: var(--l4); }
 
 /* Level name */
 .level-card h2 {
@@ -239,7 +224,7 @@ hr {
   font-weight: 700 !important;
   letter-spacing: 0.14em !important;
   text-transform: uppercase !important;
-  color: #9ca3af !important;
+  color: #374151 !important;
   border-bottom: 1px solid #e5e7eb !important;
   padding-bottom: 0.35rem !important;
   margin: 0 0 0.65rem !important;
@@ -278,6 +263,10 @@ hr {
 .level-4 li::before { color: var(--l4); }
 
 /* Sub-labels inside Developer column (Seniors, Principals, Both levels) */
+.level-card .column p {
+  margin: 0;
+}
+
 .level-card .column p strong {
   display: block;
   font-size: 0.68rem;
@@ -285,7 +274,7 @@ hr {
   text-transform: uppercase;
   letter-spacing: 0.07em;
   color: #6b7280;
-  margin: 0.8rem 0 0.25rem;
+  margin: 1.2rem 0 0.15rem;
 }
 
 .level-card .column p strong:first-child {
