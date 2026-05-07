@@ -144,7 +144,7 @@ title: "Code Connect Summit 2026"
   <div class="ccs-section-title">Speakers</div>
   <div class="ccs-speakers-grid" id="speakersGrid">
 
-    <div class="ccs-speaker-card" onclick="expandSpeaker(this)">
+    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
       <div class="ccs-speaker-front">
         <div class="ccs-speaker-avatar"></div>
         <div class="ccs-speaker-name">Tom</div>
@@ -160,7 +160,7 @@ title: "Code Connect Summit 2026"
       </div>
     </div>
 
-    <div class="ccs-speaker-card" onclick="expandSpeaker(this)">
+    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
       <div class="ccs-speaker-front">
         <div class="ccs-speaker-avatar"></div>
         <div class="ccs-speaker-name">Vincent &amp; Enoch</div>
@@ -176,7 +176,7 @@ title: "Code Connect Summit 2026"
       </div>
     </div>
 
-    <div class="ccs-speaker-card" onclick="expandSpeaker(this)">
+    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
       <div class="ccs-speaker-front">
         <div class="ccs-speaker-avatar"></div>
         <div class="ccs-speaker-name">Marcus &amp; Massimo</div>
@@ -192,7 +192,7 @@ title: "Code Connect Summit 2026"
       </div>
     </div>
 
-    <div class="ccs-speaker-card" onclick="expandSpeaker(this)">
+    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
       <div class="ccs-speaker-front">
         <div class="ccs-speaker-avatar"></div>
         <div class="ccs-speaker-name">Rodney</div>
@@ -208,7 +208,7 @@ title: "Code Connect Summit 2026"
       </div>
     </div>
 
-    <div class="ccs-speaker-card" onclick="expandSpeaker(this)">
+    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
       <div class="ccs-speaker-front">
         <div class="ccs-speaker-avatar"></div>
         <div class="ccs-speaker-name">Tjaard</div>
@@ -224,7 +224,7 @@ title: "Code Connect Summit 2026"
       </div>
     </div>
 
-    <div class="ccs-speaker-card" onclick="expandSpeaker(this)">
+    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
       <div class="ccs-speaker-front">
         <div class="ccs-speaker-avatar"></div>
         <div class="ccs-speaker-name">Nick Driver</div>
@@ -240,7 +240,7 @@ title: "Code Connect Summit 2026"
       </div>
     </div>
 
-    <div class="ccs-speaker-card" onclick="expandSpeaker(this)">
+    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
       <div class="ccs-speaker-front">
         <div class="ccs-speaker-avatar"></div>
         <div class="ccs-speaker-name">Jason</div>
@@ -264,8 +264,14 @@ function expandSpeaker(card) {
   var grid = document.getElementById('speakersGrid');
   var cards = grid.querySelectorAll('.ccs-speaker-card');
   var isOpen = card.classList.contains('open');
-  cards.forEach(function(c) { c.classList.remove('open'); });
-  if (!isOpen) { card.classList.add('open'); }
+  cards.forEach(function(c) {
+    c.classList.remove('open');
+    c.setAttribute('aria-expanded', 'false');
+  });
+  if (!isOpen) {
+    card.classList.add('open');
+    card.setAttribute('aria-expanded', 'true');
+  }
 }
 </script>
 ```
