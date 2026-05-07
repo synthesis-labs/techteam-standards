@@ -137,3 +137,135 @@ title: "Code Connect Summit 2026"
   </table>
 </section>
 ```
+
+```{=html}
+<!-- SPEAKERS -->
+<section id="speakers" class="ccs-section">
+  <div class="ccs-section-title">Speakers</div>
+  <div class="ccs-speakers-grid" id="speakersGrid">
+
+    <div class="ccs-speaker-card" onclick="expandSpeaker(this)">
+      <div class="ccs-speaker-front">
+        <div class="ccs-speaker-avatar"></div>
+        <div class="ccs-speaker-name">Tom</div>
+        <div class="ccs-speaker-talk">Keynote</div>
+      </div>
+      <div class="ccs-speaker-detail">
+        <div class="ccs-speaker-photo">Photo coming soon</div>
+        <div>
+          <div class="ccs-speaker-bio-name">Tom</div>
+          <div class="ccs-speaker-bio-talk">Keynote</div>
+          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ccs-speaker-card" onclick="expandSpeaker(this)">
+      <div class="ccs-speaker-front">
+        <div class="ccs-speaker-avatar"></div>
+        <div class="ccs-speaker-name">Vincent &amp; Enoch</div>
+        <div class="ccs-speaker-talk">Streaming in a High-Pressure Environment</div>
+      </div>
+      <div class="ccs-speaker-detail">
+        <div class="ccs-speaker-photo">Photo coming soon</div>
+        <div>
+          <div class="ccs-speaker-bio-name">Vincent &amp; Enoch</div>
+          <div class="ccs-speaker-bio-talk">Streaming in a High-Pressure Environment (i.e. Fraud)</div>
+          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ccs-speaker-card" onclick="expandSpeaker(this)">
+      <div class="ccs-speaker-front">
+        <div class="ccs-speaker-avatar"></div>
+        <div class="ccs-speaker-name">Marcus &amp; Massimo</div>
+        <div class="ccs-speaker-talk">LLM in Document Understanding</div>
+      </div>
+      <div class="ccs-speaker-detail">
+        <div class="ccs-speaker-photo">Photo coming soon</div>
+        <div>
+          <div class="ccs-speaker-bio-name">Marcus &amp; Massimo</div>
+          <div class="ccs-speaker-bio-talk">LLM in Document Understanding</div>
+          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ccs-speaker-card" onclick="expandSpeaker(this)">
+      <div class="ccs-speaker-front">
+        <div class="ccs-speaker-avatar"></div>
+        <div class="ccs-speaker-name">Rodney</div>
+        <div class="ccs-speaker-talk">Running Kubernetes at Home the Easy Way</div>
+      </div>
+      <div class="ccs-speaker-detail">
+        <div class="ccs-speaker-photo">Photo coming soon</div>
+        <div>
+          <div class="ccs-speaker-bio-name">Rodney</div>
+          <div class="ccs-speaker-bio-talk">Running Kubernetes at Home the Easy Way, Because Overcomplicating Things Is a Lifestyle Choice</div>
+          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ccs-speaker-card" onclick="expandSpeaker(this)">
+      <div class="ccs-speaker-front">
+        <div class="ccs-speaker-avatar"></div>
+        <div class="ccs-speaker-name">Tjaard</div>
+        <div class="ccs-speaker-talk">Building a Roblox Game with My Son</div>
+      </div>
+      <div class="ccs-speaker-detail">
+        <div class="ccs-speaker-photo">Photo coming soon</div>
+        <div>
+          <div class="ccs-speaker-bio-name">Tjaard</div>
+          <div class="ccs-speaker-bio-talk">Building a Roblox Game with My Son — What Broke, What Scaled, What Didn't</div>
+          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ccs-speaker-card" onclick="expandSpeaker(this)">
+      <div class="ccs-speaker-front">
+        <div class="ccs-speaker-avatar"></div>
+        <div class="ccs-speaker-name">Nick Driver</div>
+        <div class="ccs-speaker-talk">Self-Healing Codebases</div>
+      </div>
+      <div class="ccs-speaker-detail">
+        <div class="ccs-speaker-photo">Photo coming soon</div>
+        <div>
+          <div class="ccs-speaker-bio-name">Nick Driver</div>
+          <div class="ccs-speaker-bio-talk">Self-Healing Codebases</div>
+          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ccs-speaker-card" onclick="expandSpeaker(this)">
+      <div class="ccs-speaker-front">
+        <div class="ccs-speaker-avatar"></div>
+        <div class="ccs-speaker-name">Jason</div>
+        <div class="ccs-speaker-talk">Workshop: Smart Trainer</div>
+      </div>
+      <div class="ccs-speaker-detail">
+        <div class="ccs-speaker-photo">Photo coming soon</div>
+        <div>
+          <div class="ccs-speaker-bio-name">Jason</div>
+          <div class="ccs-speaker-bio-talk">Workshop: Smart Trainer — Realtime AI Fitness Trainer</div>
+          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+function expandSpeaker(card) {
+  var grid = document.getElementById('speakersGrid');
+  var cards = grid.querySelectorAll('.ccs-speaker-card');
+  var isOpen = card.classList.contains('open');
+  cards.forEach(function(c) { c.classList.remove('open'); });
+  if (!isOpen) { card.classList.add('open'); }
+}
+</script>
+```
