@@ -1,0 +1,10 @@
+project:
+  output-dir: ../../dist/code_connect_summit
+
+format:
+  html:
+    theme: none
+    css: style.css
+    toc: false
+    embed-resources: true
+    page-layout: full
