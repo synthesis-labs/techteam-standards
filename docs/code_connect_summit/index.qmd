@@ -4,8 +4,8 @@ title: "Code Connect Summit 2026"
 
 ```{=html}
 <!-- NAV -->
-<nav class="ccs-nav">
-  <a class="ccs-nav-logo" href="#">⬡ synthesis</a>
+<nav class="ccs-nav" aria-label="Site navigation">
+  <a class="ccs-nav-logo" href="#"><span aria-hidden="true">⬡</span> synthesis</a>
   <ul class="ccs-nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#schedule">Schedule</a></li>
@@ -27,9 +27,9 @@ title: "Code Connect Summit 2026"
   </div>
   <p class="ccs-hero-tagline">An extraordinary showcase of innovation for the Synthesis tech team.</p>
   <div class="ccs-hero-meta">
-    <span class="ccs-hero-meta-item"><span class="ccs-hero-meta-icon">⏰</span> June 5, 2026 &nbsp;·&nbsp; 09:00–16:30</span>
-    <span class="ccs-hero-meta-item"><span class="ccs-hero-meta-icon">📍</span> Synthesis Office &nbsp;·&nbsp; JHB &amp; CPT</span>
-    <span class="ccs-hero-meta-item"><span class="ccs-hero-meta-icon">🏛</span> Training Rooms</span>
+    <span class="ccs-hero-meta-item"><span class="ccs-hero-meta-icon" aria-hidden="true">⏰</span> June 5, 2026 &nbsp;·&nbsp; 09:00–16:30</span>
+    <span class="ccs-hero-meta-item"><span class="ccs-hero-meta-icon" aria-hidden="true">📍</span> Synthesis Office &nbsp;·&nbsp; JHB &amp; CPT</span>
+    <span class="ccs-hero-meta-item"><span class="ccs-hero-meta-icon" aria-hidden="true">🏛</span> Training Rooms</span>
   </div>
   <a class="ccs-hero-cta" href="https://forms.office.com/Pages/ResponsePage.aspx?id=hdvPlCM9SUigZlza2WXM2AYv7RPSF49BsSdfvCGj1WdUQTJHV1Q1SUtVSjlDMVBZQTdOMTdUVlNWMS4u">RSVP Now →</a>
 </div>
