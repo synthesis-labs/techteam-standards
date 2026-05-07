@@ -1,4 +1,4 @@
-# TechTeam Standards
+# TechTeam Content Repository
 
 Shared technical documents for the Synthesis Software Technologies engineering community.
 
