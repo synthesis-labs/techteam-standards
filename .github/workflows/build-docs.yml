@@ -1,10 +1,11 @@
-name: Build and Deploy Docs
+name: Build and Deploy Site
 
 on:
   push:
     branches: [main]
     paths:
       - 'docs/**'
+      - 'decks/**'
       - '.github/workflows/build-docs.yml'
   workflow_dispatch:
 
@@ -33,6 +34,21 @@ jobs:
             [ -f "$doc_dir/$doc_name.md" ] || continue
             echo "Rendering: $doc_name"
             (cd "$doc_dir" && quarto render "$doc_name.md")
+          done
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build all decks
+        run: |
+          for deck_dir in decks/*/; do
+            deck_name="$(basename "$deck_dir")"
+            [ -f "$deck_dir/slides.md" ] || continue
+            echo "Building deck: $deck_name"
+            (cd "$deck_dir" && npm install && npm run build -- --base /${{ github.event.repository.name }}/decks/$deck_name/)
+            mkdir -p "dist/decks/$deck_name"
+            cp -r "$deck_dir/dist/." "dist/decks/$deck_name/"
           done
 
       - uses: actions/upload-pages-artifact@v3

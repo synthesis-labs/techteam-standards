@@ -2,7 +2,10 @@
 
 ## Repository structure
 
-Each document lives in its own folder under `docs/` alongside its own Quarto config and stylesheet:
+Two artifact types live side by side:
+
+- **Documents** — long-form HTML written in Quarto under `docs/`.
+- **Decks** — slide presentations written in [Slidev](https://sli.dev) under `decks/`.
 
 ```
 docs/
@@ -10,10 +13,19 @@ docs/
     <doc-name>.md       Source document
     _quarto.yml         Quarto config (formats, output path)
     style.css           Document-specific stylesheet
+decks/
+  <deck-name>/
+    slides.md           Slidev source (markdown + per-slide YAML frontmatter)
+    package.json        Slidev + Vue dependencies
+    Makefile            install / dev / build / export targets
+    layouts/            Custom layouts (cover, section, end)
+    components/         Reusable Vue components
+    public/             Static assets (logos, images)
 tools/
-  build.sh              Build script (requires Docker)
+  build.sh              Document build script (requires Docker)
 dist/
-  <doc-name>/           Generated artefacts — HTML and PDF (git-ignored)
+  <doc-name>/           Generated document artefacts — HTML (git-ignored)
+  decks/<deck-name>/    Generated deck SPA (git-ignored, CI-only)
 ```
 
 ## Generating documents locally
@@ -43,8 +55,22 @@ Output lands in `dist/<doc-name>/`:
 2. Run `./tools/build.sh <name>` to test locally.
 3. Push to `main` — the [build-docs workflow](.github/workflows/build-docs.yml) will render and publish automatically.
 
+## Working with decks
+
+Decks are built with Slidev (Node.js). Requires Node 20+.
+
+```bash
+cd decks/<deck-name>
+make install      # one-time, downloads ~280MB (playwright-chromium for PDF export)
+make dev          # live preview at http://localhost:3030
+make build        # static SPA in dist/
+make export       # render to slides.pdf
+```
+
+Each deck ships with an `AGENTS.md` describing its layouts, components, and editing conventions.
+
 ## GitHub Pages
 
-On every push to `main` that touches `docs/`, the [build-docs workflow](.github/workflows/build-docs.yml) renders all documents and deploys them to [GitHub Pages](https://synthesis-labs.github.io/techteam-standards/).
+On every push to `main` that touches `docs/` or `decks/`, the [build-docs workflow](.github/workflows/build-docs.yml) renders all documents, builds all decks, and deploys the combined site to [GitHub Pages](https://synthesis-labs.github.io/techteam-standards/). Decks publish at `/decks/<deck-name>/`.
 
 **One-time setup** (repo admin): Settings → Pages → Source → **GitHub Actions**.
