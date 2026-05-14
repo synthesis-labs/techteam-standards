@@ -254,6 +254,37 @@ If your day job produces documents and decisions, you already have a codebase. Y
 </Principle>
 
 ---
+
+# Skills are the distribution mechanism
+
+Once you have a pipeline — source format, build toolchain, repo structure, publish step — you can encode it as a skill. Every agent that picks up that skill gets the whole pipeline for free.
+
+<div class="grid grid-cols-2 gap-8 mt-6">
+<div>
+
+**Without skills:**
+- Each agent reinvents the approach
+- Inconsistent structure across projects
+- Good practices live in one person's head
+- Every new project starts from scratch
+
+</div>
+<div>
+
+**With a `proposal-document`, `architecture-review`, `technical-talk` skill:**
+- Pipeline is defined once, used everywhere
+- Agents and humans follow the same process
+- Practices spread across teams automatically
+- The skill improves; every project benefits
+
+</div>
+</div>
+
+<Principle class="mt-6">
+You write the SDLC once. The skill carries it everywhere.
+</Principle>
+
+---
 layout: center
 class: text-center
 ---
