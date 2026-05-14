@@ -1,6 +1,6 @@
 ---
 theme: default
-title: Notes on Working with Agents
+title: "(Notes on)<br>Working with Agents"
 info: |
   Code Connect Summit 2026 — Tom Wells
 class: text-center
@@ -13,9 +13,8 @@ fonts:
   sans: Inter
   mono: JetBrains Mono
 layout: cover
-subtitle: Some things worth rethinking
 author: "Tom Wells"
-date: "TBD"
+date: "5 June 2026"
 eyebrow: "CODE CONNECT SUMMIT · 2026"
 organisation: "Synthesis"
 logo: /synthesis-logo.png
@@ -95,6 +94,13 @@ logo: /synthesis-logo.png
 </style>
 
 ---
+layout: center
+class: text-center
+---
+
+# First: The boring stuff.
+
+---
 layout: section
 number: "01"
 title: Rethink the OS
@@ -121,12 +127,13 @@ subtitle: The runtime environment wasn't built for this
 <div>
 
 **What we actually need:**
-- Keyboard-driven workspace switching
-- True concurrent workspace isolation
-- Tiling layout for multi-context work
-- A compositor built for this workflow
+- Higher information density — see more at once
+- Fast, low-friction context switching
+- Isolated workspaces per project or task
+- No hunting for windows, files, or applications
+- No cognitive overhead between switches
 
-<div class="mt-4 text-accent font-semibold">Omarchy + Wayland + Hyprland</div>
+<div class="mt-4 text-muted text-sm">(Omarchy + Hyprland — seems like a great option!)</div>
 
 </div>
 </div>
@@ -134,6 +141,18 @@ subtitle: The runtime environment wasn't built for this
 <div class="mt-6 text-muted text-sm italic">
 That's not a hypothetical workload. That's Tuesday.
 </div>
+
+---
+
+<img src="/mac_agents_1.png" class="absolute inset-0 w-full h-full object-contain" />
+
+---
+
+<img src="/omarchy_agents_1.png" class="absolute inset-0 w-full h-full object-contain" />
+
+---
+
+<img src="/omarchy_agents_2.png" class="absolute inset-0 w-full h-full object-contain" />
 
 ---
 layout: section
@@ -173,51 +192,77 @@ Every artifact has source, a build, and a release. Treat it like software.
 </Principle>
 
 ---
-layout: section
-number: "03"
-title: Make Knowledge Work Transparent
-subtitle: The BA pipeline shouldn't be a black box
----
 
----
+# Business analysis is software
 
-# From black box to audit trail
+<BeforeAfter>
+<template #before>
 
-<div class="pipeline mt-6 mb-6">
-  <span class="step">Source docs</span>
-  <span class="arrow">→</span>
-  <span class="step">Analysis</span>
-  <span class="arrow">→</span>
-  <span class="step">Findings</span>
-  <span class="arrow">→</span>
-  <span class="step">Recommendations</span>
-  <span class="arrow">→</span>
-  <span class="step final">Published</span>
-</div>
+Analyst reads source docs privately  
+→ Synthesises findings on their laptop  
+→ Produces a report or deck  
+→ Emails it out  
+→ Reasoning is gone. Only the output survives.
 
-Each stage is a committed artifact. The reasoning doesn't disappear when the document is emailed.
+</template>
+<template #after>
 
-<Principle>
+Source docs committed to git  
+→ Analysis as committed artifacts  
+→ Findings → Recommendations → Published  
+→ Every step traceable, diffable, reviewable
+
+</template>
+</BeforeAfter>
+
+<Principle class="mt-4">
 "Why did we recommend X?" should have a traceable answer in git history.
 </Principle>
 
-<style scoped>
-.pipeline { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
-.step { background: var(--deck-tip-bg); border: 1px solid var(--deck-tip-border); padding: 0.35rem 0.75rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500; color: var(--deck-navy); }
-.step.final { background: var(--deck-navy); color: white; border-color: var(--deck-navy); }
-.arrow { color: var(--deck-blue-accent); font-weight: bold; }
-</style>
+---
+
+# Operations is software
+
+<div class="grid grid-cols-2 gap-12 mt-4">
+<div>
+
+**Every role has a pipeline:**
+- Finance — budgets, forecasts, approvals
+- Resourcing — allocations, capacity, hiring
+- Sales — proposals, pipeline, orders
+- Operations — invoices, contracts, compliance
+
+</div>
+<div>
+
+**We should be acting like engineering managers of our own work:**
+- Source-controlled inputs and outputs
+- Repeatable, reviewable processes
+- Agents as team members, not tools
+- Humans in the loop via pull request
+
+</div>
+</div>
+
+<div class="mt-6 px-4 py-3 rounded" style="background:#EEF2FF;border-left:3px solid #4D7EF7;font-style:italic;font-size:0.9rem;color:#0D1120;">
+"Morning Claude, please update this proposal with the new ZAR/EUR rates, and add a 30 day acceptance window to protect for forex movement."
+<div class="mt-2" style="font-style:normal;font-size:0.8rem;color:#6B7280;">(Agent restores state from git, finds the proposal, queries the new rate, updates the document and commits + publishes it)</div>
+</div>
+
+<Principle class="mt-4">
+If your day job produces documents and decisions, you already have a codebase. You just haven't treated it like one yet.
+</Principle>
 
 ---
 layout: center
 class: text-center
 ---
 
-# Now: the code itself.
+# Now: The interesting stuff.
 
 ---
 layout: section
-number: "04"
+number: "03"
 title: Encode Architecture in Types
 subtitle: Effect systems as structural guardrails
 ---
@@ -240,8 +285,8 @@ Types are a compression format for architectural intent. You write the architect
 
 ---
 layout: section
-number: "05"
-title: Agents Build the Hard Abstractions
+number: "04"
+title: Build the Hard Abstractions
 subtitle: Keep the agentic surface small and clean
 ---
 
@@ -262,11 +307,58 @@ object InvoiceAggregate : Aggregate<
 }
 ```
 
-<div class="mt-3 text-muted text-sm">Hidden underneath: Kafka Streams topology · vector clock dep tracking · OCC version checks · deferred retry queues</div>
-
 <Principle class="mt-3">
 Agents design the framework. Agents and humans alike use it.
 </Principle>
+
+---
+
+# What the framework handles for you
+
+<div class="grid grid-cols-2 gap-8 mt-4 text-sm">
+<div>
+
+- Requests arrive as HTTP `GET` or `POST`
+- Entity residency lookup — it may live on another partition, forward accordingly
+- `GET` → hit the materialised state store, return current state
+- `POST` → encode as a `Create` or `Mutate` command, write to Kafka topic
+- Command Processor reads from Kafka and checks vector clock deps (If-Fence)
+- Deps not yet satisfied → park command in the deferred queue
+
+</div>
+<div>
+
+- Deps satisfied → check OCC version (If-Match)
+- Version conflict → send conflict reply to caller
+- <span style="color:#22c55e">Both checks pass → run aggregate domain logic *</span>
+- Write resulting event to the events topic
+- <span style="color:#22c55e">Update the state store *</span>
+- Send success reply to caller
+- Periodically retry deferred queue as new events arrive
+
+</div>
+</div>
+
+<div class="mt-4 text-muted text-sm">You never touch any of this. The framework owns it.</div>
+<div class="text-sm" style="color:#22c55e">* your code runs here</div>
+
+---
+
+# Everyone is now an architect & process engineer
+
+The tools and languages we used to love are less important than we think. What matters now is how we show up as the manager of a highly talented development team.
+
+<div class="grid grid-cols-3 gap-6 mt-8">
+<Principle title="Engineering process">
+Source control, pipelines, review, and release — applied to everything we produce, not just code.
+</Principle>
+<Principle title="Domain knowledge">
+Understanding the problem deeply enough to know when the output is right, and when it isn't.
+</Principle>
+<Principle title="Accountability">
+Owning the decisions, the architecture, and the consequences — regardless of who wrote the code.
+</Principle>
+</div>
 
 ---
 layout: end
@@ -275,5 +367,5 @@ eyebrow: QUESTIONS WELCOME
 speaker: "Tom Wells"
 organisation: "Synthesis"
 email: "tom@synthesis.co.za"
-footer: "Code Connect Summit · TBD"
+footer: "Code Connect Summit · 5 June 2026"
 ---

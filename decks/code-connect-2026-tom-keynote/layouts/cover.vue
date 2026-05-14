@@ -2,7 +2,7 @@
   <div class="slidev-layout cover">
     <img v-if="$frontmatter.logo" :src="$frontmatter.logo" class="cover-logo" :alt="$frontmatter.organisation || 'logo'" />
     <div v-if="$frontmatter.eyebrow" class="cover-eyebrow">{{ $frontmatter.eyebrow }}</div>
-    <h1 class="cover-title">{{ $frontmatter.title }}</h1>
+    <h1 class="cover-title" v-html="$frontmatter.title"></h1>
     <div class="cover-rule" />
     <div v-if="$frontmatter.subtitle" class="cover-subtitle">{{ $frontmatter.subtitle }}</div>
     <div class="cover-footer">
@@ -62,7 +62,10 @@
   font-weight: 400;
 }
 .cover-footer {
-  margin-top: auto;
+  position: absolute;
+  bottom: 3rem;
+  left: 5rem;
+  right: 5rem;
   display: flex;
   justify-content: space-between;
   font-size: 0.85rem;
