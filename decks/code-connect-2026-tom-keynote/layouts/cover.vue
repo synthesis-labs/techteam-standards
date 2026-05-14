@@ -1,6 +1,6 @@
 <template>
   <div class="slidev-layout cover">
-    <img v-if="$frontmatter.logo" :src="import.meta.env.BASE_URL + $frontmatter.logo.replace(/^\//, '')" class="cover-logo" :alt="$frontmatter.organisation || 'logo'" />
+    <img v-if="$frontmatter.logo" :src="logoSrc" class="cover-logo" :alt="$frontmatter.organisation || 'logo'" />
     <div v-if="$frontmatter.eyebrow" class="cover-eyebrow">{{ $frontmatter.eyebrow }}</div>
     <h1 class="cover-title" v-html="$frontmatter.title"></h1>
     <div class="cover-rule" />
@@ -14,6 +14,16 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import { computed } from 'vue'
+const props = defineProps({ frontmatter: Object })
+const logoSrc = computed(() => {
+  const logo = props.frontmatter?.logo
+  if (!logo) return ''
+  return import.meta.env.BASE_URL + logo.replace(/^\//, '')
+})
+</script>
 
 <style scoped>
 .cover {
