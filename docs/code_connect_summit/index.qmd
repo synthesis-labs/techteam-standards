@@ -5,11 +5,12 @@ title: "Code Connect Summit 2026"
 ```{=html}
 <!-- NAV -->
 <nav class="ccs-nav" aria-label="Site navigation">
-  <a class="ccs-nav-logo" href="#"><span aria-hidden="true">⬡</span> synthesis</a>
+  <a class="ccs-nav-logo" href="#"><img src="images/Araxi_Group_Synthesis_White.png" alt="Synthesis" style="height:108px;"></a>
   <ul class="ccs-nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#hosts">Hosts</a></li>
     <li><a href="#speakers">Speakers</a></li>
+    <li><a href="#schedule">Schedule</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a class="ccs-nav-rsvp" href="https://forms.office.com/Pages/ResponsePage.aspx?id=hdvPlCM9SUigZlza2WXM2AYv7RPSF49BsSdfvCGj1WdUQTJHV1Q1SUtVSjlDMVBZQTdOMTdUVlNWMS4u">RSVP Now</a>
@@ -29,7 +30,7 @@ title: "Code Connect Summit 2026"
   <div class="ccs-hero-meta">
     <span class="ccs-hero-meta-item"><span class="ccs-hero-meta-icon" aria-hidden="true">⏰</span> June 5, 2026 &nbsp;·&nbsp; 09:00–16:30</span>
     <span class="ccs-hero-meta-item"><span class="ccs-hero-meta-icon" aria-hidden="true">📍</span> Synthesis Office &nbsp;·&nbsp; JHB &amp; CPT</span>
-    <span class="ccs-hero-meta-item"><span class="ccs-hero-meta-icon" aria-hidden="true">🏛</span> Training Rooms</span>
+    <span class="ccs-hero-meta-item"><span class="ccs-hero-meta-icon" aria-hidden="true">🏛</span> JHB: Training Room &nbsp;·&nbsp; CPT: Table Mountain &amp; Newlands Meeting Rooms</span>
   </div>
   <a class="ccs-hero-cta" href="https://forms.office.com/Pages/ResponsePage.aspx?id=hdvPlCM9SUigZlza2WXM2AYv7RPSF49BsSdfvCGj1WdUQTJHV1Q1SUtVSjlDMVBZQTdOMTdUVlNWMS4u">RSVP Now →</a>
 </div>
@@ -46,6 +47,113 @@ title: "Code Connect Summit 2026"
   </p>
 </section>
 
+```
+
+```{=html}
+<!-- HOSTS -->
+<section id="hosts" class="ccs-section">
+  <div class="ccs-section-title">Hosts</div>
+  <div class="ccs-speakers-grid" id="hostsGrid">
+
+    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
+      <div class="ccs-speaker-front">
+        <div class="ccs-speaker-avatar"><img src="images/Host - Kieron.png" alt="Kieron"></div>
+        <div class="ccs-speaker-name">Kieron</div>
+      </div>
+      <div class="ccs-speaker-detail">
+        <div class="ccs-speaker-photo"><img src="images/Host - Kieron.png" alt="Kieron"></div>
+        <div>
+          <div class="ccs-speaker-bio-name">Kieron</div>
+          <div class="ccs-speaker-bio-text">Kieron is a senior technology leader and a member of the Technology Office at Synthesis. As Lead Applied Engineer, he has played a key role in rolling out AI methodologies and tooling across the business, earning him the affectionate title of &#8220;that agent guy.&#8221; When he is not revolutionising software development practices, Kieron is an avid board game &#8220;player&#8221; &#8212; which is to say, collector &#8212; and enjoys spending time with his family, reading, and listening to dumb podcasts about funny but largely inconsequential things (come talk to me about &#8216;Bigfeets&#8217;).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
+      <div class="ccs-speaker-front">
+        <div class="ccs-speaker-avatar"><img src="images/Host - Archie.png" alt="Archie"></div>
+        <div class="ccs-speaker-name">Archie</div>
+      </div>
+      <div class="ccs-speaker-detail">
+        <div class="ccs-speaker-photo"><img src="images/Host - Archie.png" alt="Archie"></div>
+        <div>
+          <div class="ccs-speaker-bio-name">Archie</div>
+          <div class="ccs-speaker-bio-text">Archie is the Lead Research Engineer and a software, data, and AI specialist who finds a strange amount of joy in tackling &#8220;impossible&#8221; problems. Armed with an MIT PhD and a patent tucked away, Archie&#8217;s real mission is building end-to-end AI solutions where data security and privacy are treated like VIP guests. It&#8217;s all about fusing innovation with systems that are as rock-solid as they are smart. Between architecting the future, you&#8217;ll find Archie refueling with iced tea, giving Kieron a hard time, or being politely bossed around by a very assertive puppy.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SPEAKERS -->
+<section id="speakers" class="ccs-section">
+  <div class="ccs-section-title">Speakers</div>
+  <div class="ccs-speakers-grid" id="speakersGrid">
+
+    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
+      <div class="ccs-speaker-front">
+        <div class="ccs-speaker-avatar"><img src="images/Speaker - Tom.png" alt="Tom"></div>
+        <div class="ccs-speaker-name">Tom</div>
+      </div>
+      <div class="ccs-speaker-detail">
+        <div class="ccs-speaker-photo"><img src="images/Speaker - Tom.png" alt="Tom"></div>
+        <div>
+          <div class="ccs-speaker-bio-name">Tom</div>
+          <div class="ccs-speaker-bio-text">Tom is a natural technologist who spends his time experimenting with and evaluating new ideas, architectures, and tools. He is responsible for technical strategy and identifying future emerging disruptors.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
+      <div class="ccs-speaker-front">
+        <div class="ccs-speaker-avatar"><img src="images/Speaker - Vincent.png" alt="Vincent"></div>
+        <div class="ccs-speaker-name">Vincent</div>
+      </div>
+      <div class="ccs-speaker-detail">
+        <div class="ccs-speaker-photo"><img src="images/Speaker - Vincent.png" alt="Vincent"></div>
+        <div>
+          <div class="ccs-speaker-bio-name">Vincent</div>
+          <div class="ccs-speaker-bio-text">Vincent works in the Intelligent Data team. He stumbled into data science largely by accident after getting a degree in theoretical physics. In his free time he tries to keep his life in order, plays some classical guitar, runs, and messes around on harmonica. He also occasionally messes around with coding puzzles.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
+      <div class="ccs-speaker-front">
+        <div class="ccs-speaker-avatar"><img src="images/Speaker - Enoch.png" alt="Enoch"></div>
+        <div class="ccs-speaker-name">Enoch</div>
+      </div>
+      <div class="ccs-speaker-detail">
+        <div class="ccs-speaker-photo"><img src="images/Speaker - Enoch.png" alt="Enoch"></div>
+        <div>
+          <div class="ccs-speaker-bio-name">Enoch</div>
+          <div class="ccs-speaker-bio-text">Enoch is a member of the Intelligent Data team where he serves as a Data Engineer and resident Gen-Z. Specializing in streaming data engineering and MLOps, he spends his time architecting low-latency systems. When he's not behind the drums, he's usually providing the team with existential shower thoughts that nobody asked for.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+function expandSpeaker(card) {
+  var grid = card.closest('.ccs-speakers-grid');
+  var cards = grid.querySelectorAll('.ccs-speaker-card');
+  var isOpen = card.classList.contains('open');
+  cards.forEach(function(c) {
+    c.classList.remove('open');
+    c.setAttribute('aria-expanded', 'false');
+  });
+  if (!isOpen) {
+    card.classList.add('open');
+    card.setAttribute('aria-expanded', 'true');
+  }
+}
+</script>
+```
+
+```{=html}
 <!-- SCHEDULE -->
 <section id="schedule" class="ccs-section">
   <div class="ccs-section-title">Schedule</div>
@@ -70,274 +178,64 @@ title: "Code Connect Summit 2026"
       </tr>
       <tr>
         <td class="ccs-time">09:45–10:15</td>
-        <td>
-          <span class="ccs-talk-title">Streaming in a High-Pressure Environment</span>
-          <span class="ccs-talk-sub">i.e. Fraud</span>
-        </td>
-        <td>Vincent &amp; Enoch</td>
+        <td><span class="ccs-talk-title">25 Different Languages — Tell Us About Your Insanity</span></td>
+        <td>Vincent</td>
       </tr>
-      <tr>
+      <tr class="ccs-row-tba">
         <td class="ccs-time">10:20–10:50</td>
-        <td><span class="ccs-talk-title">LLM in Document Understanding</span></td>
-        <td>Marcus &amp; Massimo</td>
+        <td>To Be Announced</td>
+        <td>TBA</td>
       </tr>
       <tr class="ccs-row-break">
         <td class="ccs-time">10:50–11:10</td>
         <td colspan="2"><span aria-hidden="true">☕</span> Break</td>
       </tr>
-      <tr class="ccs-row-special">
+      <tr class="ccs-row-tba">
         <td class="ccs-time">11:10–11:55</td>
-        <td colspan="2">
-          <span class="ccs-talk-title">Panel: The Future of Software Engineering in the Age of AI</span>
-          <span class="ccs-talk-sub">Facilitated by Kieron &amp; Archie &nbsp;·&nbsp; Panelists: Tom, Tjaard, Marais, MikeG</span>
-          <ol class="ccs-panel-questions">
-            <li>What is the future when the funding runs out for tools?</li>
-            <li>Are we overestimating short-term impact and underestimating long-term disruption—or the opposite?</li>
-            <li>Who is accountable when AI-generated systems fail in production?</li>
-            <li>Are we heading toward more standardized architectures because AI performs better within constraints?</li>
-            <li>Where should humans remain "in the loop" no matter how good AI gets?</li>
-            <li>Are we moving toward fewer engineers with higher leverage, or fundamentally different roles altogether?</li>
-          </ol>
-        </td>
+        <td>To Be Announced</td>
+        <td>TBA</td>
       </tr>
-      <tr>
+      <tr class="ccs-row-tba">
         <td class="ccs-time">12:00–12:30</td>
-        <td><span class="ccs-talk-title">Running Kubernetes at Home the Easy Way, Because Overcomplicating Things Is a Lifestyle Choice</span></td>
-        <td>Rodney</td>
+        <td>To Be Announced</td>
+        <td>TBA</td>
       </tr>
       <tr class="ccs-row-break">
         <td class="ccs-time">12:30–13:30</td>
         <td colspan="2"><span aria-hidden="true">🍽</span> Lunch Break</td>
       </tr>
       <tr>
-        <td class="ccs-time">13:30–14:00</td>
-        <td><span class="ccs-talk-title">Building a Roblox Game with My Son — What Broke, What Scaled, What Didn't</span></td>
-        <td>Tjaard</td>
+        <td class="ccs-time">13:30–13:50</td>
+        <td><span class="ccs-talk-title">Algorave 101 — Making Music by Editing Code Live</span></td>
+        <td>Enoch</td>
       </tr>
-      <tr>
-        <td class="ccs-time">14:05–14:35</td>
-        <td><span class="ccs-talk-title">Self-Healing Codebases</span></td>
-        <td>Nick Driver</td>
+      <tr class="ccs-row-tba">
+        <td class="ccs-time">13:50–14:20</td>
+        <td>To Be Announced</td>
+        <td>TBA</td>
       </tr>
-      <tr class="ccs-row-special">
-        <td class="ccs-time">14:40–15:40</td>
-        <td><span class="ccs-talk-title">Workshop: Smart Trainer — Realtime AI Fitness Trainer</span></td>
-        <td>Jason</td>
+      <tr class="ccs-row-tba">
+        <td class="ccs-time">14:20–14:50</td>
+        <td>To Be Announced</td>
+        <td>TBA</td>
+      </tr>
+      <tr class="ccs-row-tba">
+        <td class="ccs-time">14:50–15:50</td>
+        <td>To Be Announced</td>
+        <td>TBA</td>
       </tr>
       <tr class="ccs-row-break">
-        <td class="ccs-time">15:40–16:00</td>
+        <td class="ccs-time">15:50–16:10</td>
         <td colspan="2"><span aria-hidden="true">☕</span> Break</td>
       </tr>
       <tr>
-        <td class="ccs-time">16:00–16:30</td>
+        <td class="ccs-time">16:10–16:30</td>
         <td><span class="ccs-talk-title">Final Thank You &amp; Prizes</span></td>
         <td>Kieron &amp; Archie</td>
       </tr>
     </tbody>
   </table>
 </section>
-```
-
-```{=html}
-<!-- SPEAKERS -->
-<section id="speakers" class="ccs-section">
-  <div class="ccs-section-title">Speakers</div>
-  <div class="ccs-speakers-grid" id="speakersGrid">
-
-    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
-      <div class="ccs-speaker-front">
-        <div class="ccs-speaker-avatar"><img src="images/Speaker - Tom.png" alt="Tom"></div>
-        <div class="ccs-speaker-name">Tom</div>
-        <div class="ccs-speaker-talk">Keynote</div>
-      </div>
-      <div class="ccs-speaker-detail">
-        <div class="ccs-speaker-photo"><img src="images/Speaker - Tom.png" alt="Tom"></div>
-        <div>
-          <div class="ccs-speaker-bio-name">Tom</div>
-          <div class="ccs-speaker-bio-talk">Keynote</div>
-          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
-      <div class="ccs-speaker-front">
-        <div class="ccs-speaker-avatar"><img src="images/Speaker - Vincent.png" alt="Vincent"></div>
-        <div class="ccs-speaker-name">Vincent</div>
-        <div class="ccs-speaker-talk">Streaming in a High-Pressure Environment</div>
-      </div>
-      <div class="ccs-speaker-detail">
-        <div class="ccs-speaker-photo"><img src="images/Speaker - Vincent.png" alt="Vincent"></div>
-        <div>
-          <div class="ccs-speaker-bio-name">Vincent</div>
-          <div class="ccs-speaker-bio-talk">Streaming in a High-Pressure Environment (i.e. Fraud)</div>
-          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
-      <div class="ccs-speaker-front">
-        <div class="ccs-speaker-avatar"><img src="images/Speaker - Enoch.png" alt="Enoch"></div>
-        <div class="ccs-speaker-name">Enoch</div>
-        <div class="ccs-speaker-talk">Streaming in a High-Pressure Environment</div>
-      </div>
-      <div class="ccs-speaker-detail">
-        <div class="ccs-speaker-photo"><img src="images/Speaker - Enoch.png" alt="Enoch"></div>
-        <div>
-          <div class="ccs-speaker-bio-name">Enoch</div>
-          <div class="ccs-speaker-bio-talk">Streaming in a High-Pressure Environment (i.e. Fraud)</div>
-          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
-      <div class="ccs-speaker-front">
-        <div class="ccs-speaker-avatar"><img src="images/Speaker - Marcus.png" alt="Marcus"></div>
-        <div class="ccs-speaker-name">Marcus</div>
-        <div class="ccs-speaker-talk">LLM in Document Understanding</div>
-      </div>
-      <div class="ccs-speaker-detail">
-        <div class="ccs-speaker-photo"><img src="images/Speaker - Marcus.png" alt="Marcus"></div>
-        <div>
-          <div class="ccs-speaker-bio-name">Marcus</div>
-          <div class="ccs-speaker-bio-talk">LLM in Document Understanding</div>
-          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
-      <div class="ccs-speaker-front">
-        <div class="ccs-speaker-avatar"><img src="images/Speaker - Massimo.png" alt="Massimo"></div>
-        <div class="ccs-speaker-name">Massimo</div>
-        <div class="ccs-speaker-talk">LLM in Document Understanding</div>
-      </div>
-      <div class="ccs-speaker-detail">
-        <div class="ccs-speaker-photo"><img src="images/Speaker - Massimo.png" alt="Massimo"></div>
-        <div>
-          <div class="ccs-speaker-bio-name">Massimo</div>
-          <div class="ccs-speaker-bio-talk">LLM in Document Understanding</div>
-          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
-      <div class="ccs-speaker-front">
-        <div class="ccs-speaker-avatar"><img src="images/Speaker - Rodney.png" alt="Rodney"></div>
-        <div class="ccs-speaker-name">Rodney</div>
-        <div class="ccs-speaker-talk">Running Kubernetes at Home the Easy Way</div>
-      </div>
-      <div class="ccs-speaker-detail">
-        <div class="ccs-speaker-photo"><img src="images/Speaker - Rodney.png" alt="Rodney"></div>
-        <div>
-          <div class="ccs-speaker-bio-name">Rodney</div>
-          <div class="ccs-speaker-bio-talk">Running Kubernetes at Home the Easy Way, Because Overcomplicating Things Is a Lifestyle Choice</div>
-          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
-      <div class="ccs-speaker-front">
-        <div class="ccs-speaker-avatar"><img src="images/Speaker - Tjaard.png" alt="Tjaard"></div>
-        <div class="ccs-speaker-name">Tjaard</div>
-        <div class="ccs-speaker-talk">Building a Roblox Game with My Son</div>
-      </div>
-      <div class="ccs-speaker-detail">
-        <div class="ccs-speaker-photo"><img src="images/Speaker - Tjaard.png" alt="Tjaard"></div>
-        <div>
-          <div class="ccs-speaker-bio-name">Tjaard</div>
-          <div class="ccs-speaker-bio-talk">Building a Roblox Game with My Son — What Broke, What Scaled, What Didn't</div>
-          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
-      <div class="ccs-speaker-front">
-        <div class="ccs-speaker-avatar"><img src="images/Speaker - Nick.png" alt="Nick Driver"></div>
-        <div class="ccs-speaker-name">Nick Driver</div>
-        <div class="ccs-speaker-talk">Self-Healing Codebases</div>
-      </div>
-      <div class="ccs-speaker-detail">
-        <div class="ccs-speaker-photo"><img src="images/Speaker - Nick.png" alt="Nick Driver"></div>
-        <div>
-          <div class="ccs-speaker-bio-name">Nick Driver</div>
-          <div class="ccs-speaker-bio-talk">Self-Healing Codebases</div>
-          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
-      <div class="ccs-speaker-front">
-        <div class="ccs-speaker-avatar"><img src="images/Speaker - Jason.png" alt="Jason"></div>
-        <div class="ccs-speaker-name">Jason</div>
-        <div class="ccs-speaker-talk">Workshop: Smart Trainer</div>
-      </div>
-      <div class="ccs-speaker-detail">
-        <div class="ccs-speaker-photo"><img src="images/Speaker - Jason.png" alt="Jason"></div>
-        <div>
-          <div class="ccs-speaker-bio-name">Jason</div>
-          <div class="ccs-speaker-bio-talk">Workshop: Smart Trainer — Realtime AI Fitness Trainer</div>
-          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
-      <div class="ccs-speaker-front">
-        <div class="ccs-speaker-avatar"><img src="images/Host - Kieron.png" alt="Kieron"></div>
-        <div class="ccs-speaker-name">Kieron</div>
-        <div class="ccs-speaker-talk">Host &amp; MC</div>
-      </div>
-      <div class="ccs-speaker-detail">
-        <div class="ccs-speaker-photo"><img src="images/Host - Kieron.png" alt="Kieron"></div>
-        <div>
-          <div class="ccs-speaker-bio-name">Kieron</div>
-          <div class="ccs-speaker-bio-talk">Host &amp; MC</div>
-          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
-      <div class="ccs-speaker-front">
-        <div class="ccs-speaker-avatar"><img src="images/Host - Archie.png" alt="Archie"></div>
-        <div class="ccs-speaker-name">Archie</div>
-        <div class="ccs-speaker-talk">Host &amp; MC</div>
-      </div>
-      <div class="ccs-speaker-detail">
-        <div class="ccs-speaker-photo"><img src="images/Host - Archie.png" alt="Archie"></div>
-        <div>
-          <div class="ccs-speaker-bio-name">Archie</div>
-          <div class="ccs-speaker-bio-talk">Host &amp; MC</div>
-          <div class="ccs-speaker-bio-text">Bio coming soon.</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<script>
-function expandSpeaker(card) {
-  var grid = document.getElementById('speakersGrid');
-  var cards = grid.querySelectorAll('.ccs-speaker-card');
-  var isOpen = card.classList.contains('open');
-  cards.forEach(function(c) {
-    c.classList.remove('open');
-    c.setAttribute('aria-expanded', 'false');
-  });
-  if (!isOpen) {
-    card.classList.add('open');
-    card.setAttribute('aria-expanded', 'true');
-  }
-}
-</script>
 ```
 
 ```{=html}
@@ -355,7 +253,8 @@ function expandSpeaker(card) {
   <div class="ccs-section-title">Contact</div>
   <div class="ccs-contact-text">
     Questions? Reach out to the hosts:<br>
-    <a href="mailto:kieron@synthesis.co.za">kieron@synthesis.co.za</a>
+    <a href="mailto:kieron@synthesis.co.za">kieron@synthesis.co.za</a> &nbsp;·&nbsp;
+    <a href="mailto:archana@synthesis.co.za">archana@synthesis.co.za</a>
   </div>
 </section>
 
