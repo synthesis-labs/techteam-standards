@@ -2,9 +2,10 @@
 
 ## Repository structure
 
-Two artifact types live side by side:
+Three artifact types live side by side:
 
 - **Documents** — long-form HTML written in Quarto under `docs/`.
+- **Sites** — standalone Quarto pages or microsites under `sites/`.
 - **Decks** — slide presentations written in [Slidev](https://sli.dev) under `decks/`.
 
 ```
@@ -13,6 +14,12 @@ docs/
     <doc-name>.md       Source document
     _quarto.yml         Quarto config (formats, output path)
     style.css           Document-specific stylesheet
+sites/
+  <site-name>/
+    index.qmd           Site entry point
+    _quarto.yml         Quarto config (formats, output path)
+    style.css           Site-specific stylesheet
+    images/             Site-specific image assets
 decks/
   <deck-name>/
     slides.md           Slidev source (markdown + per-slide YAML frontmatter)
@@ -25,6 +32,7 @@ tools/
   build.sh              Document build script (requires Docker)
 dist/
   <doc-name>/           Generated document artefacts — HTML (git-ignored)
+  sites/<site-name>/    Generated Quarto site artefacts (git-ignored, CI-only)
   decks/<deck-name>/    Generated deck SPA (git-ignored, CI-only)
 ```
 
@@ -55,6 +63,15 @@ Output lands in `dist/<doc-name>/`:
 2. Run `./tools/build.sh <name>` to test locally.
 3. Push to `main` — the [build-docs workflow](.github/workflows/build-docs.yml) will render and publish automatically.
 
+## Working with sites
+
+Sites are standalone Quarto pages or microsites. Each site uses `index.qmd` as its entry point and writes to `dist/sites/<site-name>/`.
+
+```bash
+cd sites/<site-name>
+quarto render index.qmd
+```
+
 ## Working with decks
 
 Decks are built with Slidev (Node.js). Requires Node 20+.
@@ -71,6 +88,6 @@ Each deck ships with an `AGENTS.md` describing its layouts, components, and edit
 
 ## GitHub Pages
 
-On every push to `main` that touches `docs/` or `decks/`, the [build-docs workflow](.github/workflows/build-docs.yml) renders all documents, builds all decks, and deploys the combined site to [GitHub Pages](https://synthesis-labs.github.io/techteam-standards/). Decks publish at `/decks/<deck-name>/`.
+On every push to `main` that touches `docs/`, `sites/`, or `decks/`, the [build-docs workflow](.github/workflows/build-docs.yml) renders all documents, renders all sites, builds all decks, and deploys the combined site to [GitHub Pages](https://synthesis-labs.github.io/techteam-standards/). Sites publish at `/sites/<site-name>/`; decks publish at `/decks/<deck-name>/`.
 
 **One-time setup** (repo admin): Settings → Pages → Source → **GitHub Actions**.

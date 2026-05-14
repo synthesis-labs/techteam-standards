@@ -1,5 +1,5 @@
 project:
-  output-dir: ../../dist/code_connect_summit
+  output-dir: ../../dist/sites/code_connect_summit_2026
 
 format:
   html:

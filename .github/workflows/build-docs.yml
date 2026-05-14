@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'docs/**'
+      - 'sites/**'
       - 'decks/**'
       - '.github/workflows/build-docs.yml'
   workflow_dispatch:
@@ -38,6 +39,15 @@ jobs:
               echo "Rendering: $doc_name"
               (cd "$doc_dir" && quarto render "$doc_name.md")
             fi
+          done
+
+      - name: Render all sites
+        run: |
+          for site_dir in sites/*/; do
+            site_name="$(basename "$site_dir")"
+            [ -f "$site_dir/index.qmd" ] || continue
+            echo "Rendering site: $site_name"
+            (cd "$site_dir" && quarto render "index.qmd")
           done
 
       - uses: actions/setup-node@v4
