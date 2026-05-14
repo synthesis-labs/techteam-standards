@@ -3,3 +3,4 @@ dist/
 /.quarto/
 **/*.quarto_ipynb
 **/.quarto/
+.DS_Store
