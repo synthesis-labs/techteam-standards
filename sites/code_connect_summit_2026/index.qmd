@@ -133,6 +133,48 @@ title: "Code Connect Summit 2026"
       </div>
     </div>
 
+    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
+      <div class="ccs-speaker-front">
+        <div class="ccs-speaker-avatar"><img src="images/Speaker - Nick.png" alt="Nick"></div>
+        <div class="ccs-speaker-name">Nicholas</div>
+      </div>
+      <div class="ccs-speaker-detail">
+        <div class="ccs-speaker-photo"><img src="images/Speaker - Nick.png" alt="Nick"></div>
+        <div>
+          <div class="ccs-speaker-bio-name">Nicholas</div>
+          <div class="ccs-speaker-bio-text">Nick's relationship with computers started before he could properly write, and his handwriting is testament to the fact. After early exposure to networking and hardware through his father's company, he grew up terminal-first and still prefers a shell to a GUI. An MSc in Chemistry researching low-cost solar cells, Nick brings a scientist's allergy to hand-wavy BS and a bias toward feedback loops, measurement, and evidence over vibes. He pivoted into software the hard way: Nand2Tetris, low-level systems, no dependencies, no shortcuts. Since 2024, he has been deep in LLMs, agentic workflows, and the slightly cursed mission of automating himself out of a job through self-healing software factories.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
+      <div class="ccs-speaker-front">
+        <div class="ccs-speaker-avatar"><img src="images/Speaker - Rodney.png" alt="Rodney"></div>
+        <div class="ccs-speaker-name">Rodney</div>
+      </div>
+      <div class="ccs-speaker-detail">
+        <div class="ccs-speaker-photo"><img src="images/Speaker - Rodney.png" alt="Rodney"></div>
+        <div>
+          <div class="ccs-speaker-bio-name">Rodney</div>
+          <div class="ccs-speaker-bio-text">Rodney is a Technical Lead for Managed Operations and manages a DevOps team at Synthesis Software Technologies. He focuses on automation, Kubernetes, cloud platforms, and practical engineering delivery, helping teams operate more reliably and efficiently. With a strong interest in solving real-world technical problems, Rodney enjoys working with tools and practices that make systems easier to manage, scale, and support. His work sits at the intersection of DevOps, platform operations, automation, and continuous improvement. Outside of work, Rodney is interested in home automation, IoT, and renewable energy.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ccs-speaker-card" role="button" tabindex="0" aria-expanded="false" onclick="expandSpeaker(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();expandSpeaker(this)}">
+      <div class="ccs-speaker-front">
+        <div class="ccs-speaker-avatar"><img src="images/Speaker - Jason.png" alt="Jason"></div>
+        <div class="ccs-speaker-name">Jason</div>
+      </div>
+      <div class="ccs-speaker-detail">
+        <div class="ccs-speaker-photo"><img src="images/Speaker - Jason.png" alt="Jason"></div>
+        <div>
+          <div class="ccs-speaker-bio-name">Jason</div>
+          <div class="ccs-speaker-bio-text">Jason is a software professional at Synthesis Software Technologies, where he has worked in the software industry for around three and a half years. Alongside his work in technology, Jason has developed a strong passion for endurance sports, having completed five half Ironman events and one marathon. As part of his training, Jason regularly uses a smart trainer at home and has spent plenty of time working with the software that connects to it — sparking his curiosity about how that technology is built and creating the perfect opportunity to bring together his passion for endurance sport and his profession in software engineering. Outside of work and training, Jason is also passionate about coffee, another hobby he hopes to explore through the lens of technology in a future talk.</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -178,7 +220,7 @@ function expandSpeaker(card) {
       </tr>
       <tr>
         <td class="ccs-time">09:45–10:15</td>
-        <td><span class="ccs-talk-title">25 Different Languages — Tell Us About Your Insanity</span></td>
+        <td><span class="ccs-talk-title">Functional Programming == Object Oriented Programming</span></td>
         <td>Vincent</td>
       </tr>
       <tr class="ccs-row-tba">
@@ -195,10 +237,10 @@ function expandSpeaker(card) {
         <td>To Be Announced</td>
         <td>TBA</td>
       </tr>
-      <tr class="ccs-row-tba">
+      <tr>
         <td class="ccs-time">12:00–12:30</td>
-        <td>To Be Announced</td>
-        <td>TBA</td>
+        <td><span class="ccs-talk-title">Running Kubernetes at Home the Easy Way, Because Overcomplicating Things Is a Lifestyle Choice</span></td>
+        <td>Rodney</td>
       </tr>
       <tr class="ccs-row-break">
         <td class="ccs-time">12:30–13:30</td>
@@ -214,15 +256,15 @@ function expandSpeaker(card) {
         <td>To Be Announced</td>
         <td>TBA</td>
       </tr>
-      <tr class="ccs-row-tba">
+      <tr>
         <td class="ccs-time">14:20–14:50</td>
-        <td>To Be Announced</td>
-        <td>TBA</td>
+        <td><span class="ccs-talk-title">Self-Healing Codebases</span></td>
+        <td>Nicholas</td>
       </tr>
-      <tr class="ccs-row-tba">
+      <tr class="ccs-row-special">
         <td class="ccs-time">14:50–15:50</td>
-        <td>To Be Announced</td>
-        <td>TBA</td>
+        <td><span class="ccs-talk-title">Workshop: Smart Trainer — Realtime AI Fitness Trainer</span></td>
+        <td>Jason</td>
       </tr>
       <tr class="ccs-row-break">
         <td class="ccs-time">15:50–16:10</td>
