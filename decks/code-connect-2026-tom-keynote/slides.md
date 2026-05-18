@@ -221,6 +221,55 @@ Source docs committed to git
 
 ---
 
+# Old principles. New urgency.
+
+The principles software engineering accumulated over decades were always valuable. With agents producing code at velocity, they're load-bearing — every design decision now has a much larger blast radius.
+
+<div class="grid grid-cols-2 gap-x-10 gap-y-2 mt-6 text-sm">
+<div>
+
+**DRY** — a duplicated pattern used to be copy-paste fatigue; now it multiplies at the rate the agent can type.
+
+**Impossible states unrepresentable** — the compiler rejects what code review might miss. Encode invariants once.
+
+**The right abstraction** — a wrong one used to live in 200 lines; now it propagates across the codebase in an afternoon.
+
+**Developer experience** — the agent IS the developer. Clear APIs and good errors compound on every invocation.
+
+**Least surprise** — the agent infers behaviour from names and conventions. Consistency is now correctness.
+
+**Locality of behaviour** — agents read in windows; code that changes together should live together.
+
+**Parse, don't validate** — push invariants into the type at the boundary, not deep inside the function.
+
+**Explicit over implicit** — agents misread magic constantly. Less clever, more correct.
+
+</div>
+<div>
+
+**YAGNI** — agents over-engineer by default; the constraint pulls them back to the actual requirement.
+
+**Single source of truth** — duplication is drift waiting to happen. No two definitions of "user".
+
+**Encapsulation** — smaller public surface area means fewer ways for the agent to misuse it.
+
+**Separation of concerns** — when something goes wrong, the blast radius should be bounded.
+
+**Tests as executable specifications** — agents can run them. Specs become a fitness function for the loop.
+
+**Boring technology** — agents have stronger priors on common, well-documented tools. Novelty is a tax.
+
+**Total functions** — no partial cases for the agent to forget to handle.
+
+</div>
+</div>
+
+<div class="mt-6 text-center text-muted text-sm italic">
+Engineering taste was a productivity multiplier. With agents, it's a survival trait.
+</div>
+
+---
+
 # Operations is software
 
 <div class="grid grid-cols-2 gap-12 mt-4">
