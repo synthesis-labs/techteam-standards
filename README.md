@@ -8,6 +8,12 @@ Shared technical documents for the Synthesis Software Technologies engineering c
 |---|---|
 | [AI Maturity Levels — A Field Guide](https://synthesis-labs.github.io/techteam-content/ai_maturity_field_guide/ai_maturity_field_guide.html) | How individuals and teams adopt and integrate AI tools into their daily work |
 
+## Sites
+
+| Site | |
+|---|---|
+| [Code Connect Summit 2026](https://synthesis-labs.github.io/techteam-content/sites/code_connect_summit_2026/) | Conference landing page — speakers, schedule, and RSVP |
+
 ## Decks
 
 | Deck | |
